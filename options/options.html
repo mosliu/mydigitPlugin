@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="styles/options.css" />
+  <script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+  <script type="text/javascript" src="../js/const.js"></script>
+  <title>松松 Chrome 插件工具集</title>
+</head>
+
+<body>
+  <header>
+    <span>松松 Chrome 插件工具集</span>
+    <br/>
+  </header>
+  <article>
+    <span>
+      <label  for="CB_FuncEnable"> 总功能开关 </label>
+      <input  type="checkbox" id="CB_FuncEnable" />
+    </span>
+
+    <section>
+      <fieldset>
+        <ul>
+          <li>
+            <label for="timePerPostReply">发帖间隔时间设定（单位：ms,小于15000则停止）</label>
+            <input type="number" id ="timePerPostReply">
+          </li>
+          <li>
+            <label for="timeListRefresh">列表刷新间隔时间设定（单位：ms，小于60000则停止）</label>
+            <input type="number" id ="timeListRefresh">
+          </li>
+          <li>
+            <label  for="CB_DebugEnable"> 自动签到开关(尚未完成) </label>
+            <input  type="checkbox" id="CB_CheckinEnable" />
+          </li>
+          <li>
+            <label  for="replyAttachBefore"> 回复前附加 </label>
+            <input type="text" id ="replyAttachBefore">
+          </li>
+          <li>
+            <label  for="CB_DebugEnable"> 附加标题 </label>
+            <input  type="checkbox" id="CB_PlusReEnable" />
+          </li>
+          <li>
+            <label  for="replyAttachAfter"> 回复后附加 </label>
+            <input type="text" id ="replyAttachAfter">
+          </li>
+          <li>
+            <label  for="CB_DebugEnable"> DEBUG开关 </label>
+            <input  type="checkbox" id="CB_DebugEnable" />
+          </li>
+
+        </ul>
+        <div>
+          <input type="button" id="btn_confirm" class="btns" value="确定" />
+        </div>
+      </fieldset>
+    </section>
+  </article>
+  <script type="text/javascript" src="options.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{
+  "manifest_version": 2,
+
+  "name": "__MSG_extName__",
+  "version": "0.7.4",
+
+  "description": "插件用于网页自动化",
+  "default_locale": "en",
+
+  "icons": {
+    "128": "bookshelf_128x128.png"
+  },
+  "permissions": [
+    "<all_urls>", "contextMenus", "tabs", "storage", "cookies", "notifications", "alarms", "activeTab", "bookmarks"
+  ],
+  "background": {
+    "scripts": ["/js/jquery-3.1.0.min.js","/js/const.js","/js/bg_utils.js", "background.js"]
+  },
+
+  "options_page" : "options/options.html",
+
+  "page_action": {
+    "default_icon": {
+      "16": "bookshelf_16x16.png",
+      "128": "bookshelf_128x128.png"
+    },
+    "default_title": "Moses Plugin For digit", // shown in tooltip
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://bbs.mydigit.cn/read.php?*"],
+      "run_at":"document_end",
+      "js": ["/js/jquery-3.1.0.min.js","/js/const.js","/js/page_utils.js", "js/mydigit/content_script_mydigit_reply.js"]
+    }, {
+      "matches": ["*://bbs.mydigit.cn/thread.php?*"],
+      "js": ["/js/jquery-3.1.0.min.js","/js/const.js","/js/page_utils.js", "js/mydigit/content_script_mydigit_list.js"]
+    }, {
+      "matches": ["*://bbs.mydigit.cn/u.php?uid=1943460"],
+      "js": ["/js/jquery-3.1.0.min.js","/js/const.js","/js/page_utils.js", "js/mydigit/content_script_mydigit_attention.js"]
+    }, {
+      "matches": ["*://bbs.mydigit.cn/u.php"],
+      "js": ["/js/jquery-3.1.0.min.js","/js/const.js","/js/page_utils.js", "js/mydigit/content_script_mydigit_checkin.js"]
+    }, {
+      "matches": ["*://bbs.mydigit.cn/userpay.php"],
+      "js": ["/js/jquery-3.1.0.min.js","/js/const.js","/js/page_utils.js", "js/mydigit/content_script_mydigit_userpay.js"]
+    }
+  ]
+
+}

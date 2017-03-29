@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>
+		Blacklist Checking
+	</title>
+	<link rel="stylesheet" type="text/css" href="popup.css" />
+</head>
+
+<body>
+	
+	<p id="message">统计信息</p>
+	<div id="content">
+		<table>
+			<tr>
+				<td class="item-name" style="width:30%">总共</td>
+				<td style="width:70%">
+					<div id="content-total" class="content-div">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="item-name">今天</td>
+				<td>
+					<div id="content-today" class="content-div">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="item-name">已回复</td>
+				<td>
+					<div id="content-tids" class="content-div">&nbsp;</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="item-name">日期M币记录</td>
+				<td>
+					<div id="content-mbs" class="content-div">&nbsp;</div>
+				</td>
+			</tr>
+		</table>
+		<input type="button" id="btn_clear" value="去除回复标记" />
+	</div>
+</body>
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="popup.js"></script>
+
+</html>
